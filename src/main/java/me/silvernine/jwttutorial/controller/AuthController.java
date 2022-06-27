@@ -41,7 +41,7 @@ public class AuthController {
         Authentication authentication = authenticationManagerBuilder.getObject().authenticate(authenticationToken);
         SecurityContextHolder.getContext().setAuthentication(authentication);
 
-        //authentication객체를 createToken을 통해 Jwt Token을 생
+        //authentication객체를 createToken을 통해 Jwt Token을 생성
         String jwt = tokenProvider.createToken(authentication);
 
         //Response Header에 추가
